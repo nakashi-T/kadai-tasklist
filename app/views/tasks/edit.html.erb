@@ -1,1 +1,8 @@
 <p>ここは編集ページです。</p>
+
+<%= form_with(model: @task, local: true) do |task| %>
+  <%= task.label :content, 'メッセージ' %>
+  <%= task.text_field :content %>
+  
+  <%= task.submit '編集' %>
+<% end %>
