@@ -47,7 +47,7 @@ class TasksController < ApplicationController
     redirect_to tasks_url
   end
   
-  public
+  private
   def set_task
     @task = Task.find(params[:id])
   end
