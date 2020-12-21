@@ -1,8 +1,5 @@
 <p>ここは編集ページです。</p>
 
-<%= form_with(model: @task, local: true) do |task| %>
-  <%= task.label :content, 'タスク' %>
-  <%= task.text_field :content %>
-  
-  <%= task.submit '投稿' %>
-<% end %>
+<%= render 'form', task: @task %>
+
+<%= link_to '一覧に戻る', tasks_path %>
