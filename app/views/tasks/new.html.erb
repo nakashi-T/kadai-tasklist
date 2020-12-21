@@ -1,7 +1,7 @@
 <p>ここは新規ページです。</p>
 
 <%= form_with(model: @task, local: true) do |task| %>
-  <%= task.label :content, 'メッセージ' %>
+  <%= task.label :content, 'タスク' %>
   <%= task.text_field :content %>
   
   <%= task.submit '投稿' %>
