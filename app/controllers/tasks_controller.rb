@@ -21,8 +21,6 @@ class TasksController < ApplicationController
   def create
     @task = current_user.tasks.build(task_params)
     
-    task_params
-    
     if @task.save
       flash[:success] = "タスクを作成しました"
       redirect_to @task
