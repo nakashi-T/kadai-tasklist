@@ -3,7 +3,7 @@
 <ul>
   <% @tasks.each do |task| %>
     <div>
-      <li><%= link_to task.user.name, user_path(task.user) %>&gt;タスクID：<%= link_to task.id, task %>&gt;進捗：<%= task.status %>&gt;タスク：<%= task.content %> <span class="text-muted">posted at <%= task.created_at %></span></li>
+      <li>タスクID：<%= link_to task.id, task %>&gt;進捗：<%= task.status %>&gt;タスク：<%= task.content %> <span class="text-muted">posted at <%= task.created_at %></span></li>
     </div>
     <div>
       <% if current_user == task.user %>
